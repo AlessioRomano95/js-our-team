@@ -19,3 +19,25 @@ const team = [
     {name: 'Scott Estrada',  role: 'Developer', pic: `<img src="asset/img/scott-estrada-developer.jpg"`},
     {name: 'Barbara Ramos',  role: 'Graphic Designer', pic: `<img src="asset/img/barbara-ramos-graphic-designer.jpg"`}
 ]
+
+// 3
+let items = ''
+// 4
+for (let i = 0; i < team.length; i++){
+    // 5
+    const currentTeam = team[i]
+    // 6
+    items += `    
+        <div class="card">
+            <div class="pic">${currentTeam.pic}</div>
+            <div>
+                <ul>
+                    <li>${currentTeam.name}</li> 
+                    <li>${currentTeam.role}</li>   
+                </ul>
+            </div>    
+        </div>
+    `
+}
+// 7
+card.innerHTML += items        
