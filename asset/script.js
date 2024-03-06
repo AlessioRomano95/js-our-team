@@ -12,14 +12,13 @@ console.log('js-ok')
 const card = document.getElementById('card')
 // 2
 const team = [
-    {name: 'Wayne Barnett',  role: 'Founder & CEO', pic: `<img src="asset/img/wayne-barnett-founder-ceo.jpg"`},
-    {name: 'Angela Caroll',  role: 'Chief Editor', pic: `<img src="asset/img/angela-caroll-chief-editor.jpg"`},
-    {name: 'Walter Gordon',  role: 'Office Manager', pic: `<img src="asset/img/walter-gordon-office-manager.jpg"`},
-    {name: 'Angela Lopez',  role: 'Social Media Manager', pic: `<img src="asset/img/angela-lopez-social-media-manager.jpg" `},
-    {name: 'Scott Estrada',  role: 'Developer', pic: `<img src="asset/img/scott-estrada-developer.jpg"`},
-    {name: 'Barbara Ramos',  role: 'Graphic Designer', pic: `<img src="asset/img/barbara-ramos-graphic-designer.jpg"`}
+    {name: 'Wayne Barnett',  role: 'Founder & CEO', pic: `<img src="asset/img/wayne-barnett-founder-ceo.jpg" alt="">`},
+    {name: 'Angela Caroll',  role: 'Chief Editor', pic: `<img src="asset/img/angela-caroll-chief-editor.jpg" alt="">`},
+    {name: 'Walter Gordon',  role: 'Office Manager', pic: `<img src="asset/img/walter-gordon-office-manager.jpg" alt="">`},
+    {name: 'Angela Lopez',  role: 'Social Media Manager', pic: `<img src="asset/img/angela-lopez-social-media-manager.jpg" alt="">`},
+    {name: 'Scott Estrada',  role: 'Developer', pic: `<img src="asset/img/scott-estrada-developer.jpg" alt="">`},
+    {name: 'Barbara Ramos',  role: 'Graphic Designer', pic: `<img src="asset/img/barbara-ramos-graphic-designer.jpg" alt="">`}
 ]
-
 // 3
 let items = ''
 // 4
@@ -29,11 +28,11 @@ for (let i = 0; i < team.length; i++){
     // 6
     items += `    
         <div class="card">
-            <div class="pic">${currentTeam.pic}</div>
+            <div>${currentTeam.pic}</div>
             <div>
                 <ul>
-                    <li>${currentTeam.name}</li> 
-                    <li>${currentTeam.role}</li>   
+                    <li id="name">${currentTeam.name}</li> 
+                    <li>${currentTeam.role}</li>  
                 </ul>
             </div>    
         </div>
@@ -41,3 +40,5 @@ for (let i = 0; i < team.length; i++){
 }
 // 7
 card.innerHTML += items        
+
+        
